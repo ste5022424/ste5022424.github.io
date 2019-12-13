@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ste5022424.github.io/"/>
-  <updated>2019-12-12T06:26:29.552Z</updated>
+  <updated>2019-12-13T02:58:26.126Z</updated>
   <id>https://ste5022424.github.io/</id>
   
   <author>
@@ -15,6 +15,121 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Azure Devops Pipelines</title>
+    <link href="https://ste5022424.github.io/2019/12/13/AzureDevopsPipelines/"/>
+    <id>https://ste5022424.github.io/2019/12/13/AzureDevopsPipelines/</id>
+    <published>2019-12-13T02:54:09.000Z</published>
+    <updated>2019-12-13T02:58:26.126Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Azure Devops Artifacts</title>
+    <link href="https://ste5022424.github.io/2019/12/13/AzureDevopsArtifacts/"/>
+    <id>https://ste5022424.github.io/2019/12/13/AzureDevopsArtifacts/</id>
+    <published>2019-12-13T02:54:01.000Z</published>
+    <updated>2019-12-13T02:57:42.765Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Azure-DevOps-Artifacts"><a href="#Azure-DevOps-Artifacts" class="headerlink" title="Azure DevOps Artifacts"></a>Azure DevOps Artifacts</h1><h2 id="Azure-Artifacts"><a href="#Azure-Artifacts" class="headerlink" title="Azure Artifacts"></a>Azure Artifacts</h2><h3 id="1-Create-Porject"><a href="#1-Create-Porject" class="headerlink" title="1. Create Porject"></a>1. Create Porject</h3><p><img src="https://i.imgur.com/o3EBarO.png" alt></p><h3 id="2-寫一個簡單的套件並推送到倉庫"><a href="#2-寫一個簡單的套件並推送到倉庫" class="headerlink" title="2. 寫一個簡單的套件並推送到倉庫"></a>2. 寫一個簡單的套件並推送到倉庫</h3><p><img src="https://i.imgur.com/EwbFOOt.png" alt></p><blockquote><p>index.js</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">str</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'str :'</span>, str);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h3 id="3-Artifacts-gt-Connect-to-feed"><a href="#3-Artifacts-gt-Connect-to-feed" class="headerlink" title="3. Artifacts &gt; Connect to feed"></a>3. Artifacts &gt; Connect to feed</h3><p><img src="https://i.imgur.com/WDbwGcb.png" alt></p><h3 id="4-選-NPM-倉庫"><a href="#4-選-NPM-倉庫" class="headerlink" title="4. 選 NPM 倉庫"></a>4. 選 NPM 倉庫</h3><p><img src="https://i.imgur.com/cUzEXEe.png" alt></p><h3 id="5-複製內容"><a href="#5-複製內容" class="headerlink" title="5. 複製內容"></a>5. 複製內容</h3><p><img src="https://i.imgur.com/6bej1zF.png" alt></p><h3 id="6-新增一個-npmrc-並將內容貼上"><a href="#6-新增一個-npmrc-並將內容貼上" class="headerlink" title="6. 新增一個 .npmrc 並將內容貼上"></a>6. 新增一個 .npmrc 並將內容貼上</h3><p><img src="https://i.imgur.com/y9KFDAV.png" alt></p><h3 id="7-Generate-npm-credentials"><a href="#7-Generate-npm-credentials" class="headerlink" title="7. Generate npm credentials"></a>7. Generate npm credentials</h3><p><img src="https://i.imgur.com/oEcX3fQ.png" alt></p><h3 id="8-在-User-底下建立一個-npmrc-並將內容貼上"><a href="#8-在-User-底下建立一個-npmrc-並將內容貼上" class="headerlink" title="8. 在 User 底下建立一個 .npmrc 並將內容貼上"></a>8. 在 User 底下建立一個 .npmrc 並將內容貼上</h3><p><img src="https://i.imgur.com/gS85SnW.png" alt></p><h3 id="9-publish"><a href="#9-publish" class="headerlink" title="9. publish"></a>9. publish</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i </span><br><span class="line">npm publish</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/n0oighd.png" alt></p><h3 id="10-檢查是否推送成功"><a href="#10-檢查是否推送成功" class="headerlink" title="10. 檢查是否推送成功"></a>10. 檢查是否推送成功</h3><p><img src="https://i.imgur.com/CyPn9Kv.png" alt></p><h3 id="11-安裝套件"><a href="#11-安裝套件" class="headerlink" title="11.安裝套件"></a>11.安裝套件</h3><h4 id="新增-npmrc-將內容貼上"><a href="#新增-npmrc-將內容貼上" class="headerlink" title="新增.npmrc 將內容貼上"></a>新增.npmrc 將內容貼上</h4><p><img src="https://i.imgur.com/6bej1zF.png" alt></p><h4 id="install"><a href="#install" class="headerlink" title="install"></a>install</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mypackage@1.0.0</span><br></pre></td></tr></table></figure><h4 id="index-js"><a href="#index-js" class="headerlink" title="index.js"></a>index.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> f = <span class="built_in">require</span>(<span class="string">'mypackage'</span>);</span><br><span class="line">f(<span class="string">'Hello mypackage'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello Word 123'</span>);</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/Vslfdb2.png" alt></p><h2 id="使用-Azure-Pipeline-CI"><a href="#使用-Azure-Pipeline-CI" class="headerlink" title="使用 Azure Pipeline (CI)"></a>使用 Azure Pipeline (CI)</h2><h3 id="1-先設定-Artifacts-權限"><a href="#1-先設定-Artifacts-權限" class="headerlink" title="1. 先設定 Artifacts 權限"></a>1. 先設定 Artifacts 權限</h3><h4 id="1-1-Artifacts-gt-右上角齒輪-gt-Feed-settings"><a href="#1-1-Artifacts-gt-右上角齒輪-gt-Feed-settings" class="headerlink" title="1.1 Artifacts &gt; 右上角齒輪 &gt; Feed settings"></a>1.1 Artifacts &gt; 右上角齒輪 &gt; Feed settings</h4><p><img src="https://i.imgur.com/W9ozrdN.png" alt></p><p><img src="https://i.imgur.com/GuS5HAi.png" alt></p><h4 id="2-2-Permissons-gt-右上角三點-gt-加入-Allow-project-scoped-builds-amp-Allow-builds-and-releases"><a href="#2-2-Permissons-gt-右上角三點-gt-加入-Allow-project-scoped-builds-amp-Allow-builds-and-releases" class="headerlink" title="2.2 Permissons &gt; 右上角三點 &gt; 加入 Allow project-scoped builds &amp; Allow builds and releases"></a>2.2 Permissons &gt; 右上角三點 &gt; 加入 Allow project-scoped builds &amp; Allow builds and releases</h4><p><img src="https://i.imgur.com/F72PJBl.png" alt></p><h3 id="2-Pipeline-gt-選-New-Pipeline"><a href="#2-Pipeline-gt-選-New-Pipeline" class="headerlink" title="2. Pipeline &gt; 選 New Pipeline"></a>2. Pipeline &gt; 選 New Pipeline</h3><p><img src="https://i.imgur.com/tpQ9jav.png" alt></p><h3 id="3-選-Azure-Respose-Git-後選自己的專案"><a href="#3-選-Azure-Respose-Git-後選自己的專案" class="headerlink" title="3. 選 Azure Respose Git 後選自己的專案"></a>3. 選 Azure Respose Git 後選自己的專案</h3><p><img src="https://i.imgur.com/SPWRpyX.png" alt></p><p><img src="https://i.imgur.com/z9ETKWq.png" alt></p><h3 id="4-選-Node-js"><a href="#4-選-Node-js" class="headerlink" title="4. 選 Node.js"></a>4. 選 Node.js</h3><p><img src="https://i.imgur.com/BXChAvo.png" alt></p><h3 id="5-載入預設範本"><a href="#5-載入預設範本" class="headerlink" title="5. 載入預設範本"></a>5. 載入預設範本</h3><blockquote><p>範本會啟動一個 ubuntu 的容器做ＣＩ</p></blockquote><p><img src="https://i.imgur.com/LGlLAzP.png" alt></p><h3 id="6-編輯步驟，點選右邊-Show-assistant"><a href="#6-編輯步驟，點選右邊-Show-assistant" class="headerlink" title="6. 編輯步驟，點選右邊 Show assistant"></a>6. 編輯步驟，點選右邊 Show assistant</h3><p><img src="https://i.imgur.com/4Qvo28r.png" alt></p><p><img src="https://i.imgur.com/aLKCH88.png" alt></p><h3 id="7-選-npm-並加入三個步驟"><a href="#7-選-npm-並加入三個步驟" class="headerlink" title="7. 選 npm 並加入三個步驟"></a>7. 選 npm 並加入三個步驟</h3><p><img src="https://i.imgur.com/Edo0ATt.png" alt></p><h4 id="7-1-npm-install"><a href="#7-1-npm-install" class="headerlink" title="7.1 npm install"></a>7.1 npm install</h4><p><img src="https://i.imgur.com/9uI7NON.png" alt></p><h4 id="7-2-npm-version"><a href="#7-2-npm-version" class="headerlink" title="7.2 npm version"></a>7.2 npm version</h4><p><img src="https://i.imgur.com/1urTIDj.png" alt></p><h4 id="7-3-npm-publish"><a href="#7-3-npm-publish" class="headerlink" title="7.3 npm publish"></a>7.3 npm publish</h4><p><img src="https://i.imgur.com/KbjPNrw.png" alt></p><h4 id="7-4-加入-name-標籤-跟-variables-標籤"><a href="#7-4-加入-name-標籤-跟-variables-標籤" class="headerlink" title="7.4 加入 name 標籤 跟 variables 標籤"></a>7.4 加入 name 標籤 跟 variables 標籤</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="number">1.0</span><span class="string">$(Rev:.r)</span></span><br><span class="line"></span><br><span class="line"><span class="attr">variables:</span></span><br><span class="line"><span class="attr">  tag:</span> <span class="string">"$(Build.BuildNumber)"</span></span><br></pre></td></tr></table></figure><h4 id="以下是完整yml檔-（customFeed-要改成自己的）"><a href="#以下是完整yml檔-（customFeed-要改成自己的）" class="headerlink" title="以下是完整yml檔 （customFeed 要改成自己的）"></a>以下是完整yml檔 （customFeed 要改成自己的）</h4><blockquote><p>azure-pipelines.yml</p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">trigger:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">master</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="number">1.0</span><span class="string">$(Rev:.r)</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pool:</span></span><br><span class="line"><span class="attr">  vmImage:</span> <span class="string">'ubuntu-latest'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">variables:</span></span><br><span class="line"><span class="attr">  tag:</span> <span class="string">"$(Build.BuildNumber)"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">steps:</span></span><br><span class="line"><span class="attr">- task:</span> <span class="string">NodeTool@0</span></span><br><span class="line"><span class="attr">  inputs:</span></span><br><span class="line"><span class="attr">    versionSpec:</span> <span class="string">'10.x'</span></span><br><span class="line"><span class="attr">  displayName:</span> <span class="string">'Install Node.js'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">- task:</span> <span class="string">Npm@1</span></span><br><span class="line"><span class="attr">  inputs:</span></span><br><span class="line"><span class="attr">    command:</span> <span class="string">'install'</span></span><br><span class="line"><span class="attr">    customRegistry:</span> <span class="string">'useFeed'</span></span><br><span class="line"><span class="attr">    customFeed:</span> <span class="string">'4a2334a5-bdf9-4111-a296-45ec69953953/648d8565-b9df-4a54-a9e9-f506420b558e'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">- task:</span> <span class="string">Npm@1</span></span><br><span class="line"><span class="attr">  inputs:</span></span><br><span class="line"><span class="attr">    command:</span> <span class="string">'custom'</span></span><br><span class="line"><span class="attr">    customCommand:</span> <span class="string">'version $(tag) --no-git-tag-version'</span></span><br><span class="line"><span class="attr">    customRegistry:</span> <span class="string">'useFeed'</span></span><br><span class="line"><span class="attr">    customFeed:</span> <span class="string">'4a2334a5-bdf9-4111-a296-45ec69953953/648d8565-b9df-4a54-a9e9-f506420b558e'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">- task:</span> <span class="string">Npm@1</span></span><br><span class="line"><span class="attr">  inputs:</span></span><br><span class="line"><span class="attr">    command:</span> <span class="string">'publish'</span></span><br><span class="line"><span class="attr">    publishRegistry:</span> <span class="string">'useFeed'</span></span><br><span class="line"><span class="attr">    publishFeed:</span> <span class="string">'4a2334a5-bdf9-4111-a296-45ec69953953/648d8565-b9df-4a54-a9e9-f506420b558e'</span></span><br></pre></td></tr></table></figure><h3 id="8-Save-and-Run"><a href="#8-Save-and-Run" class="headerlink" title="8. Save and Run"></a>8. Save and Run</h3><blockquote><p>因為有設定 pull request ，所以不能直接 commit master，所以選 create a new branch for this commit</p></blockquote><p><img src="https://i.imgur.com/6BmetiA.png" alt></p><p><img src="https://i.imgur.com/EIKpd4L.png" alt></p><p><img src="https://i.imgur.com/1Q1AFkh.png" alt></p><p><img src="https://i.imgur.com/EusAaZf.png" alt></p><h3 id="9-回到-Repos-gt-Pull-Resquest-回-master"><a href="#9-回到-Repos-gt-Pull-Resquest-回-master" class="headerlink" title="9. 回到 Repos &gt; Pull Resquest 回 master"></a>9. 回到 Repos &gt; Pull Resquest 回 master</h3><blockquote><p>完成之後可以看到 多了一個 azure-pipelines.yml</p></blockquote><p><img src="https://i.imgur.com/y48tiX5.png" alt></p><p><img src="https://i.imgur.com/Hdlmqs9.png" alt></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://azure.microsoft.com/zh-tw/services/devops/" target="_blank" rel="noopener">azure.microsoft.com</a></li><li><a href="https://docs.microsoft.com/zh-tw/azure/devops/artifacts/npm/npmrc?view=azure-devops&tabs=windows" target="_blank" rel="noopener">Set up your client’s npmrc</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Azure-DevOps-Artifacts&quot;&gt;&lt;a href=&quot;#Azure-DevOps-Artifacts&quot; class=&quot;headerlink&quot; title=&quot;Azure DevOps Artifacts&quot;&gt;&lt;/a&gt;Azure DevOps Artifac
+      
+    
+    </summary>
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/categories/Azure-Devops/"/>
+    
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/tags/Azure-Devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Azure Devops  Repos</title>
+    <link href="https://ste5022424.github.io/2019/12/13/AzureDevopsRepos/"/>
+    <id>https://ste5022424.github.io/2019/12/13/AzureDevopsRepos/</id>
+    <published>2019-12-13T02:53:50.000Z</published>
+    <updated>2019-12-13T02:57:47.262Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Azure-DevOps-Repos"><a href="#Azure-DevOps-Repos" class="headerlink" title="Azure DevOps Repos"></a>Azure DevOps Repos</h1><h2 id="Repos"><a href="#Repos" class="headerlink" title="Repos"></a>Repos</h2><h3 id="1-New-Repository"><a href="#1-New-Repository" class="headerlink" title="1. New Repository"></a>1. New Repository</h3><p><img src="https://i.imgur.com/0UcK0XM.png" alt></p><p><img src="https://i.imgur.com/S2Uk0hd.png" alt></p><p><img src="https://i.imgur.com/ENDAzPb.png" alt></p><p><img src="https://i.imgur.com/vopXE2l.png" alt></p><h3 id="2-Clone-Project"><a href="#2-Clone-Project" class="headerlink" title="2. Clone Project"></a>2. Clone Project</h3><h4 id="http-使用-azure帳號密碼-clone"><a href="#http-使用-azure帳號密碼-clone" class="headerlink" title="http (使用 azure帳號密碼 clone)"></a>http (使用 azure帳號密碼 clone)</h4><p><img src="https://i.imgur.com/feG6njk.png" alt></p><p><img src="https://i.imgur.com/i83Vues.png" alt></p><h4 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h4><h5 id="1-create-ssh-key"><a href="#1-create-ssh-key" class="headerlink" title="1.create ssh key"></a>1.create ssh key</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -f azuredevops</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/SUESSTl.png" alt></p><p><img src="https://i.imgur.com/F6nrBKK.png" alt></p><h4 id="2-copy-azuredevops-pub"><a href="#2-copy-azuredevops-pub" class="headerlink" title="2. copy azuredevops.pub"></a>2. copy azuredevops.pub</h4><p><img src="https://i.imgur.com/WsQF4UQ.png" alt></p><h4 id="3-Creat-SSH-public-keys"><a href="#3-Creat-SSH-public-keys" class="headerlink" title="3. Creat SSH public keys"></a>3. Creat SSH public keys</h4><p><img src="https://i.imgur.com/TupuLG5.png" alt></p><h4 id="4-New-Key"><a href="#4-New-Key" class="headerlink" title="4. New Key"></a>4. New Key</h4><p><img src="https://i.imgur.com/riYjNih.png" alt></p><p><img src="https://i.imgur.com/VH7e92l.png" alt></p><h4 id="5-git-clone"><a href="#5-git-clone" class="headerlink" title="5. git clone"></a>5. git clone</h4><p><img src="https://i.imgur.com/U9QllRR.png" alt></p><p><img src="https://i.imgur.com/zxM7mqR.png" alt></p><h3 id="3-Pull-Request"><a href="#3-Pull-Request" class="headerlink" title="3. Pull Request"></a>3. Pull Request</h3><h4 id="1-Create-branch"><a href="#1-Create-branch" class="headerlink" title="1. Create branch"></a>1. Create branch</h4><p><img src="https://i.imgur.com/k7sPXmt.png" alt></p><h4 id="2-branch-name"><a href="#2-branch-name" class="headerlink" title="2. branch name"></a>2. branch name</h4><p><img src="https://i.imgur.com/FhqYBnr.png" alt></p><h4 id="3-設定規則-project-settings"><a href="#3-設定規則-project-settings" class="headerlink" title="3. 設定規則 project settings"></a>3. 設定規則 project settings</h4><p><img src="https://i.imgur.com/cCE3bOm.png" alt></p><h4 id="4-Add-branch-protection"><a href="#4-Add-branch-protection" class="headerlink" title="4. Add branch protection"></a>4. Add branch protection</h4><p><img src="https://i.imgur.com/jEqmQf7.png" alt></p><p><img src="https://i.imgur.com/9kglZT1.png" alt></p><p><img src="https://i.imgur.com/xMRXwyb.png" alt></p><h4 id="5-設定最少兩個人允許才可以合併分支（為了放便練習，先設定一個人）"><a href="#5-設定最少兩個人允許才可以合併分支（為了放便練習，先設定一個人）" class="headerlink" title="5. 設定最少兩個人允許才可以合併分支（為了放便練習，先設定一個人）"></a>5. 設定最少兩個人允許才可以合併分支（為了放便練習，先設定一個人）</h4><p><img src="https://i.imgur.com/MjBkV6G.png" alt></p><h4 id="6-修改檔案並且送交分支"><a href="#6-修改檔案並且送交分支" class="headerlink" title="6. 修改檔案並且送交分支"></a>6. 修改檔案並且送交分支</h4><p><img src="https://i.imgur.com/dNx68xZ.png" alt></p><h4 id="7-New-pull-request"><a href="#7-New-pull-request" class="headerlink" title="7. New pull request"></a>7. New pull request</h4><p><img src="https://i.imgur.com/fAdjrF4.png" alt></p><h4 id="8-選擇-dev-分支"><a href="#8-選擇-dev-分支" class="headerlink" title="8. 選擇 dev 分支"></a>8. 選擇 dev 分支</h4><p><img src="https://i.imgur.com/OIowv6p.png" alt></p><h4 id="9-Create"><a href="#9-Create" class="headerlink" title="9. Create"></a>9. Create</h4><p><img src="https://i.imgur.com/ZMs0qQu.png" alt></p><h4 id="10-Approve-批准-amp-Complete-完成"><a href="#10-Approve-批准-amp-Complete-完成" class="headerlink" title="10. Approve 批准 &amp; Complete 完成"></a>10. Approve 批准 &amp; Complete 完成</h4><p><img src="https://i.imgur.com/ieuNH0k.png" alt></p><p><img src="https://i.imgur.com/aUTFO3y.png" alt></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://azure.microsoft.com/zh-tw/services/devops/" target="_blank" rel="noopener">azure.microsoft.com</a></li><li><a href="https://docs.microsoft.com/zh-tw/azure/devops/artifacts/npm/npmrc?view=azure-devops&tabs=windows" target="_blank" rel="noopener">Set up your client’s npmrc</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Azure-DevOps-Repos&quot;&gt;&lt;a href=&quot;#Azure-DevOps-Repos&quot; class=&quot;headerlink&quot; title=&quot;Azure DevOps Repos&quot;&gt;&lt;/a&gt;Azure DevOps Repos&lt;/h1&gt;&lt;h2 id=&quot;R
+      
+    
+    </summary>
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/categories/Azure-Devops/"/>
+    
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/tags/Azure-Devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Azure Devops Bords</title>
+    <link href="https://ste5022424.github.io/2019/12/13/AzureDevopsBords/"/>
+    <id>https://ste5022424.github.io/2019/12/13/AzureDevopsBords/</id>
+    <published>2019-12-13T02:53:42.000Z</published>
+    <updated>2019-12-13T02:57:57.492Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Azure-DevOps-Boards"><a href="#Azure-DevOps-Boards" class="headerlink" title="Azure DevOps Boards"></a>Azure DevOps Boards</h1><h2 id="Boards"><a href="#Boards" class="headerlink" title="Boards"></a>Boards</h2><h3 id="1-New-WorkItem"><a href="#1-New-WorkItem" class="headerlink" title="1 New WorkItem"></a>1 New WorkItem</h3><p><img src="https://i.imgur.com/6BXx74t.png" alt></p><h3 id="2-Springts"><a href="#2-Springts" class="headerlink" title="2 Springts"></a>2 Springts</h3><p><img src="https://i.imgur.com/nSItR5y.png" alt></p><h3 id="3-New-WorkItem"><a href="#3-New-WorkItem" class="headerlink" title="3 New WorkItem"></a>3 New WorkItem</h3><p><img src="https://i.imgur.com/pjRSjhu.png" alt></p><h3 id="4-New-Task"><a href="#4-New-Task" class="headerlink" title="4 New Task"></a>4 New Task</h3><p><img src="https://i.imgur.com/RML0yTt.png" alt></p><p><img src="https://i.imgur.com/pVbpcMo.png" alt></p><p><img src="https://i.imgur.com/1OmjRLu.png" alt></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://azure.microsoft.com/zh-tw/services/devops/" target="_blank" rel="noopener">azure.microsoft.com</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Azure-DevOps-Boards&quot;&gt;&lt;a href=&quot;#Azure-DevOps-Boards&quot; class=&quot;headerlink&quot; title=&quot;Azure DevOps Boards&quot;&gt;&lt;/a&gt;Azure DevOps Boards&lt;/h1&gt;&lt;h2 i
+      
+    
+    </summary>
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/categories/Azure-Devops/"/>
+    
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/tags/Azure-Devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Azure DevOps</title>
+    <link href="https://ste5022424.github.io/2019/12/13/AzureDevops/"/>
+    <id>https://ste5022424.github.io/2019/12/13/AzureDevops/</id>
+    <published>2019-12-13T02:38:19.000Z</published>
+    <updated>2019-12-13T02:54:17.036Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Azure-DevOps"><a href="#Azure-DevOps" class="headerlink" title="Azure DevOps"></a>Azure DevOps</h1><blockquote><p>使用一組現代化的裝置服務，更聰明地規劃、更佳地共同作業並更快地交付。</p></blockquote><p><img src="https://i.imgur.com/594CjI1.png" alt></p><h2 id="1-開始免費使用"><a href="#1-開始免費使用" class="headerlink" title="1. 開始免費使用"></a>1. <a href="https://azure.microsoft.com/zh-tw/services/devops/" target="_blank" rel="noopener">開始免費使用</a></h2><p><img src="https://i.imgur.com/udhmxGc.png" alt></p><h3 id="1-1-Create-Project"><a href="#1-1-Create-Project" class="headerlink" title="1.1 Create Project"></a>1.1 Create Project</h3><p><img src="https://i.imgur.com/sJpZsaS.png" alt></p><p><img src="https://i.imgur.com/50GR5oc.png" alt></p><h3 id="1-2-Create-organization"><a href="#1-2-Create-organization" class="headerlink" title="1.2 Create organization"></a>1.2 Create organization</h3><p><img src="https://i.imgur.com/4UxeNgo.png" alt></p><h3 id="1-3-Change-Theme"><a href="#1-3-Change-Theme" class="headerlink" title="1.3 Change Theme"></a>1.3 Change Theme</h3><p><img src="https://i.imgur.com/lqwu5Uc.png" alt></p><p><img src="https://i.imgur.com/68mH1y8.png" alt></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://azure.microsoft.com/zh-tw/services/devops/" target="_blank" rel="noopener">azure.microsoft.com</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Azure-DevOps&quot;&gt;&lt;a href=&quot;#Azure-DevOps&quot; class=&quot;headerlink&quot; title=&quot;Azure DevOps&quot;&gt;&lt;/a&gt;Azure DevOps&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;使用一組現代化的裝置服務，更聰明地
+      
+    
+    </summary>
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/categories/Azure-Devops/"/>
+    
+    
+      <category term="Azure Devops" scheme="https://ste5022424.github.io/tags/Azure-Devops/"/>
+    
+  </entry>
   
   <entry>
     <title>Sequelize Migrations</title>
@@ -342,9 +457,9 @@
       <category term="Node JS" scheme="https://ste5022424.github.io/categories/Node-JS/"/>
     
     
-      <category term="Docker" scheme="https://ste5022424.github.io/tags/Docker/"/>
-    
       <category term="Node JS" scheme="https://ste5022424.github.io/tags/Node-JS/"/>
+    
+      <category term="Docker" scheme="https://ste5022424.github.io/tags/Docker/"/>
     
   </entry>
   
@@ -401,141 +516,6 @@
       <category term="ESLint" scheme="https://ste5022424.github.io/tags/ESLint/"/>
     
       <category term="Javascriptd" scheme="https://ste5022424.github.io/tags/Javascriptd/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node js Hello world!</title>
-    <link href="https://ste5022424.github.io/2019/05/20/Node-js-Hello-world/"/>
-    <id>https://ste5022424.github.io/2019/05/20/Node-js-Hello-world/</id>
-    <published>2019-05-20T08:47:59.000Z</published>
-    <updated>2019-12-12T06:26:29.551Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Node-js-Hello-world"><a href="#Node-js-Hello-world" class="headerlink" title="Node js Hello world!"></a>Node js Hello world!</h1><blockquote><p>記得先安裝 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node js</a></p></blockquote><h2 id="1-Init"><a href="#1-Init" class="headerlink" title="1. Init"></a>1. Init</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/KyI1SLv.png" alt="init"></p><p><img src="https://i.imgur.com/1iq6IQb.png" alt="init"></p><h2 id="2-新增-HelloNode-js"><a href="#2-新增-HelloNode-js" class="headerlink" title="2. 新增 HelloNode.js"></a>2. 新增 HelloNode.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello Node JS'</span>);</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/InyTfST.png" alt="HelloNode"></p><h2 id="3-執行"><a href="#3-執行" class="headerlink" title="3. 執行"></a>3. 執行</h2><h3 id="執行有三種方式"><a href="#執行有三種方式" class="headerlink" title="執行有三種方式"></a>執行有三種方式</h3><h3 id="1-node-XXX-js"><a href="#1-node-XXX-js" class="headerlink" title="(1) node XXX.js"></a>(1) node XXX.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node .\HelloNode.js</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/KbIncMz.png" alt="bash"></p><h3 id="2-node-run"><a href="#2-node-run" class="headerlink" title="(2) node run"></a>(2) node run</h3><h4 id="package-json-加入以下片段"><a href="#package-json-加入以下片段" class="headerlink" title="package.json 加入以下片段"></a>package.json 加入以下片段</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"HelloNode"</span>: <span class="string">"node HelloNode.js</span></span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/BIkArgS.png" alt="package"></p><h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run HelloNode</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/IDxDVIJ.png" alt="run"></p><h3 id="3-Vs-Code-偵錯"><a href="#3-Vs-Code-偵錯" class="headerlink" title="(3) Vs Code 偵錯"></a>(3) Vs Code 偵錯</h3><h4 id="選擇偵錯-Crtl-Shift-D-gt-設定"><a href="#選擇偵錯-Crtl-Shift-D-gt-設定" class="headerlink" title="選擇偵錯(Crtl + Shift + D) &gt; 設定"></a>選擇偵錯(Crtl + Shift + D) &gt; 設定</h4><p><img src="https://i.imgur.com/0l3LrJ4.png" alt="選擇偵錯"></p><h4 id="選-node-js"><a href="#選-node-js" class="headerlink" title="選 node js"></a>選 node js</h4><p><img src="https://i.imgur.com/a7FWok1.png" alt="node"></p><h4 id="調整設定檔"><a href="#調整設定檔" class="headerlink" title="調整設定檔"></a>調整設定檔</h4><p><img src="https://i.imgur.com/UNj8b4R.png" alt="調整設定檔"></p><h4 id="F5-啟動偵錯"><a href="#F5-啟動偵錯" class="headerlink" title="F5 啟動偵錯"></a>F5 啟動偵錯</h4><p><img src="https://i.imgur.com/TLkfqJb.png" alt="啟動偵錯"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://ithelp.ithome.com.tw/articles/10199745" target="_blank" rel="noopener">建立 第一個 Node.js 專案</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Node-js-Hello-world&quot;&gt;&lt;a href=&quot;#Node-js-Hello-world&quot; class=&quot;headerlink&quot; title=&quot;Node js Hello world!&quot;&gt;&lt;/a&gt;Node js Hello world!&lt;/h1&gt;&lt;bl
-      
-    
-    </summary>
-    
-      <category term="Node Js" scheme="https://ste5022424.github.io/categories/Node-Js/"/>
-    
-    
-      <category term="Node JS" scheme="https://ste5022424.github.io/tags/Node-JS/"/>
-    
-      <category term="VsCode" scheme="https://ste5022424.github.io/tags/VsCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue js Hello World!</title>
-    <link href="https://ste5022424.github.io/2019/05/20/Vue-js-Hello-World/"/>
-    <id>https://ste5022424.github.io/2019/05/20/Vue-js-Hello-World/</id>
-    <published>2019-05-20T03:41:47.000Z</published>
-    <updated>2019-12-12T06:26:29.555Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Vue-js-Hello-World"><a href="#Vue-js-Hello-World" class="headerlink" title="Vue js Hello World!"></a>Vue js Hello World!</h1><blockquote><p>記得先安裝 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node js</a></p></blockquote><h2 id="1-安裝-Vue-Cli"><a href="#1-安裝-Vue-Cli" class="headerlink" title="1.安裝 Vue Cli"></a>1.安裝 <a href="https://cli.vuejs.org/guide/installation.html" target="_blank" rel="noopener">Vue Cli</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/9BA3FgD.png" alt="install"></p><h2 id="2-Creat-hello-world"><a href="#2-Creat-hello-world" class="headerlink" title="2. Creat hello-world"></a>2. <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank" rel="noopener">Creat hello-world</a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create hello-world</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/hIAruHf.png" alt></p><h2 id="3-Run-Server"><a href="#3-Run-Server" class="headerlink" title="3. Run Server"></a>3. Run Server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hello-world</span><br><span class="line">npm run serve</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/fxckdrA.png" alt="hello"></p><h2 id="4-http-localhost-8081"><a href="#4-http-localhost-8081" class="headerlink" title="4. http://localhost:8081/"></a>4. <a href="http://localhost:8081/" target="_blank" rel="noopener">http://localhost:8081/</a></h2><p><img src="https://i.imgur.com/Ue0UbN9.png" alt="localhost"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://vuejs.org/" target="_blank" rel="noopener">Vue js</a></li><li><a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank" rel="noopener">Vue-create</a></li><li><a href="https://cli.vuejs.org/guide/installation.html" target="_blank" rel="noopener">Vue cli</a></li><li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">node js</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Vue-js-Hello-World&quot;&gt;&lt;a href=&quot;#Vue-js-Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Vue js Hello World!&quot;&gt;&lt;/a&gt;Vue js Hello World!&lt;/h1&gt;&lt;blockq
-      
-    
-    </summary>
-    
-      <category term="Vue js" scheme="https://ste5022424.github.io/categories/Vue-js/"/>
-    
-    
-      <category term="VsCode" scheme="https://ste5022424.github.io/tags/VsCode/"/>
-    
-      <category term="Vue js" scheme="https://ste5022424.github.io/tags/Vue-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Visual Studio Code 存檔自動排版</title>
-    <link href="https://ste5022424.github.io/2019/05/15/Visual-Studio-Code-%E5%AD%98%E6%AA%94%E8%87%AA%E5%8B%95%E6%8E%92%E7%89%88/"/>
-    <id>https://ste5022424.github.io/2019/05/15/Visual-Studio-Code-存檔自動排版/</id>
-    <published>2019-05-15T03:38:49.000Z</published>
-    <updated>2019-12-12T06:26:29.555Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Visual-Studio-Code-存檔自動排版"><a href="#Visual-Studio-Code-存檔自動排版" class="headerlink" title="Visual Studio Code 存檔自動排版"></a>Visual Studio Code 存檔自動排版</h1><h2 id="1-開啟-setting-Ctrl"><a href="#1-開啟-setting-Ctrl" class="headerlink" title="1. 開啟 setting (Ctrl + ,)"></a>1. 開啟 setting (Ctrl + ,)</h2><p><img src="https://i.imgur.com/AGKHwWU.png" alt="setting"></p><h2 id="2-輸入-“Format-On-Save”-gt-將它打勾-，-這樣存檔的時候就會自動排了"><a href="#2-輸入-“Format-On-Save”-gt-將它打勾-，-這樣存檔的時候就會自動排了" class="headerlink" title="2. 輸入 “Format On Save” &gt; 將它打勾 ， 這樣存檔的時候就會自動排了"></a>2. 輸入 “Format On Save” &gt; 將它打勾 ， 這樣存檔的時候就會自動排了</h2><p><img src="https://i.imgur.com/uSnUZl7.png" alt="Format"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Visual-Studio-Code-存檔自動排版&quot;&gt;&lt;a href=&quot;#Visual-Studio-Code-存檔自動排版&quot; class=&quot;headerlink&quot; title=&quot;Visual Studio Code 存檔自動排版&quot;&gt;&lt;/a&gt;Visual Stud
-      
-    
-    </summary>
-    
-      <category term="Visual Studio Code" scheme="https://ste5022424.github.io/categories/Visual-Studio-Code/"/>
-    
-    
-      <category term="筆記" scheme="https://ste5022424.github.io/tags/%E7%AD%86%E8%A8%98/"/>
-    
-      <category term="Visual Studio Code 存檔自動排版" scheme="https://ste5022424.github.io/tags/Visual-Studio-Code-%E5%AD%98%E6%AA%94%E8%87%AA%E5%8B%95%E6%8E%92%E7%89%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SonarLint - Sonqrqube Server Custom Rules</title>
-    <link href="https://ste5022424.github.io/2019/05/14/SonarLint-Sonqrqube-Server-Custom-Rules/"/>
-    <id>https://ste5022424.github.io/2019/05/14/SonarLint-Sonqrqube-Server-Custom-Rules/</id>
-    <published>2019-05-14T05:39:45.000Z</published>
-    <updated>2019-12-12T06:26:29.554Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="SonarLint-Sonqrqube-Server-Custom-Rules"><a href="#SonarLint-Sonqrqube-Server-Custom-Rules" class="headerlink" title="SonarLint - Sonqrqube Server Custom Rules"></a>SonarLint - Sonqrqube Server Custom Rules</h1><h2 id="1-安裝-SonarLint"><a href="#1-安裝-SonarLint" class="headerlink" title="1. 安裝 SonarLint"></a>1. 安裝 <a href="https://ste5022424.github.io/2019/04/15/Sonarqube-in-visual-studio-SonarLint/">SonarLint</a></h2><h2 id="2-檢視-gt-Team-Explore"><a href="#2-檢視-gt-Team-Explore" class="headerlink" title="2. 檢視 &gt; Team Explore"></a>2. 檢視 &gt; Team Explore</h2><p><img src="https://i.imgur.com/RdWw9Sl.png" alt="Team Explore"></p><h2 id="3-連到-Sonqrqube-Server"><a href="#3-連到-Sonqrqube-Server" class="headerlink" title="3. 連到 Sonqrqube Server"></a>3. 連到 Sonqrqube Server</h2><p><img src="https://i.imgur.com/wkKFdfO.png" alt="Sonqrqube Server"></p><h2 id="4-Connet"><a href="#4-Connet" class="headerlink" title="4. Connet"></a>4. Connet</h2><p><img src="https://i.imgur.com/F4qQEfm.png" alt="Connet"></p><p><img src="https://i.imgur.com/9csx0Jh.png" alt="Connet"></p><h2 id="5-連線之後，選擇自己的專案下載規則"><a href="#5-連線之後，選擇自己的專案下載規則" class="headerlink" title="5. 連線之後，選擇自己的專案下載規則"></a>5. 連線之後，選擇自己的專案下載規則</h2><p><img src="https://i.imgur.com/0zN7Xbb.png" alt="下載規則"></p><h2 id="6-專案會出現-sonarlint-跟-ruleset-檔案"><a href="#6-專案會出現-sonarlint-跟-ruleset-檔案" class="headerlink" title="6. 專案會出現 .sonarlint 跟 .ruleset 檔案"></a>6. 專案會出現 .sonarlint 跟 .ruleset 檔案</h2><blockquote><p>可以將檔案加入版控，組員就可以直接連線</p></blockquote><p><img src="https://i.imgur.com/ICCj1t2.png" alt="sonarlint"></p><p><img src="https://i.imgur.com/l62ve75.png" alt="ruleset"></p><h2 id="7-建置-gt-針對方案程式碼進行分析-Alt-F11"><a href="#7-建置-gt-針對方案程式碼進行分析-Alt-F11" class="headerlink" title="7. 建置 &gt; 針對方案程式碼進行分析 (Alt + F11 )"></a>7. 建置 &gt; 針對方案程式碼進行分析 (Alt + F11 )</h2><p><img src="https://i.imgur.com/BO6jdqq.png" alt="針對方案程式碼進行分析"></p><h2 id="8-回到-sonarqube-server-gt-選擇-gt-代碼規則-gt-質量配置-gt-選擇一個自己做的樣板"><a href="#8-回到-sonarqube-server-gt-選擇-gt-代碼規則-gt-質量配置-gt-選擇一個自己做的樣板" class="headerlink" title="8. 回到 sonarqube server &gt; 選擇 &gt; 代碼規則 &gt; 質量配置 &gt; 選擇一個自己做的樣板"></a>8. 回到 sonarqube server &gt; 選擇 &gt; 代碼規則 &gt; 質量配置 &gt; 選擇一個自己做的樣板</h2><p><img src="https://i.imgur.com/CtywggV.png" alt="質量配置"></p><h2 id="9-隱藏某條規則-使用S1118-當範例"><a href="#9-隱藏某條規則-使用S1118-當範例" class="headerlink" title="9. 隱藏某條規則 (使用S1118 當範例)"></a>9. 隱藏某條規則 (使用S1118 當範例)</h2><p><img src="https://i.imgur.com/bQwCsQH.png" alt="隱藏某條規則"></p><h2 id="10-回-Team-Explore-再去下載一次-profile"><a href="#10-回-Team-Explore-再去下載一次-profile" class="headerlink" title="10. 回 Team Explore 再去下載一次 profile"></a>10. 回 Team Explore 再去下載一次 profile</h2><p><img src="https://i.imgur.com/0zN7Xbb.png" alt="profile"></p><h2 id="11-就可以看到-S1118-這條規則已經被隱藏了"><a href="#11-就可以看到-S1118-這條規則已經被隱藏了" class="headerlink" title="11. 就可以看到 S1118 這條規則已經被隱藏了"></a>11. 就可以看到 S1118 這條規則已經被隱藏了</h2><p><img src="https://i.imgur.com/gZYOT9V.png" alt="隱藏"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;SonarLint-Sonqrqube-Server-Custom-Rules&quot;&gt;&lt;a href=&quot;#SonarLint-Sonqrqube-Server-Custom-Rules&quot; class=&quot;headerlink&quot; title=&quot;SonarLint - So
-      
-    
-    </summary>
-    
-      <category term="SonarLint" scheme="https://ste5022424.github.io/categories/SonarLint/"/>
-    
-    
-      <category term="SonarLint" scheme="https://ste5022424.github.io/tags/SonarLint/"/>
-    
-      <category term="Sonqrqube" scheme="https://ste5022424.github.io/tags/Sonqrqube/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Express Web Hello World</title>
-    <link href="https://ste5022424.github.io/2019/05/13/Express-Node-js-Web/"/>
-    <id>https://ste5022424.github.io/2019/05/13/Express-Node-js-Web/</id>
-    <published>2019-05-13T03:45:30.000Z</published>
-    <updated>2019-12-12T06:26:29.543Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Express-Web-Hello-World"><a href="#Express-Web-Hello-World" class="headerlink" title="Express Web Hello World"></a>Express Web Hello World</h1><blockquote><p>Express 是最小又靈活的 Node.js Web 應用程式架構，為 Web 與行動式應用程式提供一組健全的特性。</p></blockquote><h2 id="1-安裝-express-套件"><a href="#1-安裝-express-套件" class="headerlink" title="1. 安裝 express 套件"></a>1. 安裝 express 套件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express --save</span><br></pre></td></tr></table></figure><h2 id="2-新增-一個-app-js"><a href="#2-新增-一個-app-js" class="headerlink" title="2. 新增 一個 app.js"></a>2. 新增 一個 app.js</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const express = require(<span class="string">'express'</span>)</span><br><span class="line">const app = express()</span><br><span class="line">const port = 3000</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, (req, res) =&gt; res.send(<span class="string">'Hello World!'</span>))</span><br><span class="line"></span><br><span class="line">app.listen(port, () =&gt; console.log(<span class="string">'Example app listening on port $&#123;port&#125;!'</span>))</span><br></pre></td></tr></table></figure><h2 id="3-Run-node"><a href="#3-Run-node" class="headerlink" title="3. Run node"></a>3. Run node</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/WqQxqcU.png" alt="node"></p><h2 id="4-Hello-World"><a href="#4-Hello-World" class="headerlink" title="4. Hello World!"></a>4. Hello World!</h2><p><img src="https://i.imgur.com/82nZSdO.png" alt="Hello"></p><h1 id="RestfulAPI-實作-Get-Post-Put-Delete"><a href="#RestfulAPI-實作-Get-Post-Put-Delete" class="headerlink" title="RestfulAPI 實作 Get / Post / Put / Delete"></a><a href="http://expressjs.com/en/starter/basic-routing.html" target="_blank" rel="noopener">RestfulAPI</a> 實作 Get / Post / Put / Delete</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const express = require(<span class="string">'express'</span>)</span><br><span class="line">const app = express()</span><br><span class="line">const port = 3000</span><br><span class="line"></span><br><span class="line">//// RestfulAPI</span><br><span class="line"></span><br><span class="line">// get</span><br><span class="line">app.get(<span class="string">'/myget'</span>, (req, res) =&gt;</span><br><span class="line">res.send(<span class="string">'Hello World myget!'</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">//  post</span><br><span class="line">app.post(<span class="string">'/mypost'</span>, <span class="keyword">function</span> (req, res) &#123;</span><br><span class="line">    res.json(&#123; RestfulAPI: <span class="string">'mypost'</span> &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// put</span><br><span class="line">app.put(<span class="string">'/myput'</span>, <span class="keyword">function</span> (req, res) &#123;</span><br><span class="line">    res.json(&#123; RestfulAPI: <span class="string">'myput'</span> &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// delete</span><br><span class="line">app.delete(<span class="string">'/mydelete'</span>, <span class="keyword">function</span> (req, res) &#123;</span><br><span class="line">    res.json(&#123; RestfulAPI: <span class="string">'mydelete'</span> &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h3 id="Get"><a href="#Get" class="headerlink" title="Get"></a>Get</h3><blockquote><p><a href="http://localhost:3000/myget" target="_blank" rel="noopener">http://localhost:3000/myget</a></p></blockquote><p><img src="https://i.imgur.com/KIEL2im.png" alt="Get"></p><h3 id="Post"><a href="#Post" class="headerlink" title="Post"></a>Post</h3><blockquote><p><a href="http://localhost:3000/mypost" target="_blank" rel="noopener">http://localhost:3000/mypost</a></p></blockquote><p><img src="https://i.imgur.com/NHb3yAh.png" alt="Post"></p><h3 id="Put"><a href="#Put" class="headerlink" title="Put"></a>Put</h3><blockquote><p><a href="http://localhost:3000/myput" target="_blank" rel="noopener">http://localhost:3000/myput</a></p></blockquote><p><img src="https://i.imgur.com/PTcWcUh.png" alt="Put"></p><h3 id="Delete"><a href="#Delete" class="headerlink" title="Delete"></a>Delete</h3><blockquote><p><a href="http://localhost:3000/mydelete" target="_blank" rel="noopener">http://localhost:3000/mydelete</a></p></blockquote><p><img src="https://i.imgur.com/5YN1uGj.png" alt="Delete"></p><h1 id="Static-File"><a href="#Static-File" class="headerlink" title="Static File"></a><a href="http://expressjs.com/en/starter/static-files.html" target="_blank" rel="noopener">Static File</a></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const express = require(<span class="string">'express'</span>)</span><br><span class="line">const app = express()</span><br><span class="line">const port = 3000</span><br><span class="line"></span><br><span class="line">//// static files</span><br><span class="line">app.use(express.static(<span class="string">'static'</span>))</span><br><span class="line"></span><br><span class="line">app.listen(port, () =&gt; console.log(`Example app listening on port <span class="variable">$&#123;port&#125;</span>!`))</span><br></pre></td></tr></table></figure><p><img src="https://i.imgur.com/vKhOU5L.png" alt="listen"></p><h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ul><li><a href="https://expressjs.com/zh-tw/starter/installing.html" target="_blank" rel="noopener">expressjs</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Express-Web-Hello-World&quot;&gt;&lt;a href=&quot;#Express-Web-Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Express Web Hello World&quot;&gt;&lt;/a&gt;Express Web Hello
-      
-    
-    </summary>
-    
-      <category term="Express" scheme="https://ste5022424.github.io/categories/Express/"/>
-    
-    
-      <category term="Express" scheme="https://ste5022424.github.io/tags/Express/"/>
-    
-      <category term="Node Js" scheme="https://ste5022424.github.io/tags/Node-Js/"/>
     
   </entry>
   
